@@ -65,7 +65,7 @@ This is an unofficial fan project, not made or endorsed by CD PROJEKT RED or Nex
 
 ## Лицензия
 
-GPL-3.0, как у Vortex. Код можно брать, менять и распространять, но изменённые версии тоже должны
+GPL-3.0. Код можно брать, менять и распространять, но изменённые версии тоже должны
 быть открытыми. Текст лицензии в [LICENSE](LICENSE), лицензии сторонних компонентов (7-Zip, UnRAR,
 Electron и других) в `build/THIRD_PARTY_NOTICES.txt`.
 
