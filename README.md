@@ -51,8 +51,7 @@ npm start
 Установщик: `npm run dist`, он появится в `dist/`.
 
 Код лежит в `src/`: `core/` — вся логика (установка, Nexus, загрузки, FOMOD, «Доктор»),
-`renderer/` — интерфейс, переводы в `renderer/i18n.js`. Что нужно по правилам Nexus и CDPR и зачем,
-расписано в [docs/COMPLIANCE.md](docs/COMPLIANCE.md).
+`renderer/` — интерфейс, переводы в `renderer/i18n.js`.
 
 ## English
 

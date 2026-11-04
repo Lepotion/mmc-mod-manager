@@ -1,4 +1,3 @@
 node_modules/
 dist/
-# Email attachments for the Nexus application (show the personal Nexus username)
-docs/nexus-application/
+docs/
