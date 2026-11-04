@@ -1,0 +1,70 @@
+{
+  "name": "mmc-mod-manager",
+  "productName": "MMC Mod Manager",
+  "version": "1.7.0",
+  "description": "MMC (MongaManiaCorporation) mod manager for Cyberpunk 2077",
+  "author": "MongaManiaCorporation",
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/Lepotion/mmc-mod-manager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lepotion/mmc-mod-manager.git"
+  },
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node tests/core.test.js && node tests/online.test.js && node tests/collections.test.js && node tests/features.test.js",
+    "notices": "node scripts/notices.js",
+    "dist": "node scripts/notices.js && electron-builder --win"
+  },
+  "dependencies": {
+    "7zip-bin": "5.2.0",
+    "fast-xml-parser": "4.5.0",
+    "node-unrar-js": "2.0.2"
+  },
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.mongamania.mmcmodmanager",
+    "productName": "MMC Mod Manager",
+    "copyright": "MongaManiaCorporation",
+    "files": [
+      "src/**/*",
+      "build/icon.png",
+      "build/THIRD_PARTY_NOTICES.txt",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "node_modules/7zip-bin/**"
+    ],
+    "win": {
+      "icon": "build/icon.png",
+      "publisherName": "MongaManiaCorporation",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "multiLanguageInstaller": true,
+      "installerLanguages": [
+        "ru_RU",
+        "en_US"
+      ],
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "MMC Mod Manager",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "artifactName": "MMC-Mod-Manager-Setup-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "MMC-Mod-Manager-Portable-${version}.exe"
+    }
+  }
+}

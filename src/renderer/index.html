@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; script-src 'self'; connect-src 'self' wss://sso.nexusmods.com">
+  <title>MMC Mod Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="titlebar">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M4 4h18l6 6v18H10l-6-6z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        <path d="M11 11h10v4H15v2h6v4H11z" fill="currentColor"/>
+      </svg>
+      <span class="brand-name"><b>MMC</b> MOD MANAGER</span>
+      <span class="brand-corp">MongaManiaCorporation</span>
+      <span class="brand-ver">v1.7</span>
+    </div>
+  </header>
+
+  <div class="app">
+    <aside class="sidebar">
+      <nav id="nav"></nav>
+      <div class="sidebar-foot" id="gameCard"></div>
+    </aside>
+    <main id="page"></main>
+  </div>
+
+  <div id="drop" class="drop-overlay">
+    <div class="drop-box">
+      <div class="drop-icon"></div>
+      <div class="drop-title" id="dropTitle"></div>
+      <div class="drop-hint" id="dropHint"></div>
+    </div>
+  </div>
+  <div id="drawer"></div>
+  <div id="onboard" class="onboard hidden"></div>
+  <div id="progress" class="progress-overlay"></div>
+  <div id="modalRoot"></div>
+  <div id="toasts"></div>
+
+  <script src="../shared/fomod-logic.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
