@@ -1,7 +1,7 @@
 // Nexus Mods public API (v1) and nxm:// link parsing.
 const API = 'https://api.nexusmods.com/v1';
 const GAME = 'cyberpunk2077';
-const APP = { name: 'MMC Mod Manager', version: '1.7.0' };
+const APP = { name: 'MMC Mod Manager', version: '1.7.1' };
 
 const modUrl = (modId) => `https://www.nexusmods.com/${GAME}/mods/${modId}`;
 const fileUrl = (modId, fileId) => `${modUrl(modId)}?tab=files&file_id=${fileId}`;
