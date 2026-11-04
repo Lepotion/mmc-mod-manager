@@ -23,29 +23,36 @@
 
 ### Письмо в Nexus (support@nexusmods.com)
 
-> **Subject:** API application registration — MMC Mod Manager (Cyberpunk 2077)
+> **Subject:** Registering my mod manager for the API (MMC Mod Manager, Cyberpunk 2077)
 >
-> Hello! I'd like to register a public application that uses the Nexus Mods API.
+> Hi,
 >
-> - **Name:** MMC Mod Manager
-> - **Game:** Cyberpunk 2077
-> - **What it does:** a free, non-commercial Windows mod manager. It installs, enables and disables mods,
->   handles FOMOD installers, requirements, collections shared as short codes (mod/file IDs only, no
->   rehosting) and update checks.
-> - **API usage:** v1 (`users/validate`, `mods/{id}`, `mods/{id}/files`, `download_link` with nxm key/expires
->   for free users), v2 GraphQL for browsing the catalog on demand. All requests are started by the user,
->   with honest `Application-Name` / `Application-Version` headers. Keys are stored only on the user's PC,
->   encrypted with Windows DPAPI, and never sent to any other server.
-> - **Downloads:** free users press "Slow download" on the website (nxm:// handler); Premium users download
->   in the app.
-> - **Testing build:** https://github.com/Lepotion/mmc-mod-manager/releases/latest
-> - **Source code (GPL-3.0):** https://github.com/Lepotion/mmc-mod-manager
-> - **Logo:** attached (512×512, works on a dark background).
+> I'm working on a small mod manager for Cyberpunk 2077 called MMC Mod Manager and I'd like to register
+> it for the API. Right now my friends and I use it with personal API keys, but I've read the Acceptable
+> Use Policy and I know that's not okay for something other people use, so I want to do it properly.
 >
-> I'd like to use SSO once the application is approved. Thank you!
+> What it does: installs and toggles mods, handles FOMOD installers and requirements, checks for
+> updates, and lets you share your mod list with a friend as a short code. The code only has mod and
+> file IDs in it, so nothing gets re-uploaded anywhere, everyone downloads from Nexus as usual.
+>
+> On the API side I use users/validate, mods, mod files and download_link (with the key/expires from
+> the nxm link for free accounts), plus GraphQL v2 to show the mod catalog when someone opens it.
+> Everything is triggered by the user, update checks on startup are off unless you turn them on, and
+> I send proper Application-Name / Application-Version headers. API keys stay on the user's PC
+> (encrypted with Windows DPAPI) and never go to any server of mine. Free users still click "Slow
+> download" on the site, only Premium downloads directly in the app.
+>
+> It's free, non-commercial, and open source under GPL-3.0:
+> Source: https://github.com/Lepotion/mmc-mod-manager
+> Latest build: https://github.com/Lepotion/mmc-mod-manager/releases/latest
+>
+> I've attached the logo and a few screenshots. If it gets approved I'd like to switch to SSO login.
+>
+> My Nexus username: <ник на Nexus>
+>
+> Thanks!
 
-Приложи: установщик (или ссылку на релиз), `build/icon.png`. Если решишь открыть исходный код,
-дай ссылку на репозиторий: Nexus пишет, что это ускоряет регистрацию.
+Приложи `build/icon.png` и пару скриншотов (они лежат в `docs/nexus-application/`, эта папка не попадает в git).
 
 ---
 
